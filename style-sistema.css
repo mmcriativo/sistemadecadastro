@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f9f9f9;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333333;
+}
+
+header{
+    height: 50px;
+    width: 100%;
+    background-color: #0b0231;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    height: inherit;
+    width: 300px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo a{
+    color: #F6F6F6;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.nav-bar{
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-bar-btn {
+    font-size: 1.6em;
+}
+
+.nav-bar a{
+    color: #f6f6f6;
+    padding: 9px 15px;
+}
+
+.nav-bar a:hover{
+    background-color: #170272;
+    transition: all 0.3s ease;
+}
+
+
+.navbar-right a{
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+.navbar-right span{
+    padding: 0 5px;
+}
+
+.dropdown{
+}
+.dropdown span{
+    text-transform: lowercase;
+}
+
+/*CONTENT*/
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+/*LEFT*/
+
+.left-aside{
+    height: 100%;
+    width: 300px;
+    background-color: #0D023D;
+}
+
+.user-panel{
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 1px 3px #e2e2e2;
+}
+
+ul.sidebar-menu{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-menu{
+
+}
+ul.sidebar-menu li{
+    width: 100%;
+    display: block;
+    color: #F6F6F6;
+}
+
+ul.sidebar-menu > li{
+     border-bottom: 1px solid #050117;
+}
+
+ul.sidebar-menu li a{
+    display: block;
+    color: #F6F6F6;
+    text-decoration: none;
+}
+
+ul.sidebar-menu > li > a{
+    padding: 15px 15px;
+}
+ul.sidebar-menu li:hover{
+    background-color: #11044d;
+    transition: all 0.2s ease;
+}
+
+ul.sidebar-menu li a span{
+    padding-right: 10px;
+}
+
+.pull-right{
+    float: right;
+    display: block;
+}
+
+.spn{
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+}
+
+.inter-sidebar{
+    display: flex;
+    align-items: center;  
+}
+
+.margin-left{
+    margin-left: 10px;
+}
+
+.inter-sidebar i{
+    margin-right: 10px;
+}
+
+ul.submenu-aside{
+    background-color: #130257;
+    display: none;
+}
+
+.submenu-aside li{
+   padding: 15px 15px;
+}
+
+.submenu-aside li:hover{
+    border-right: 5px solid #f47e09;
+    transition: all 0.2s ease;
+}
+/*
+.sidebar-menu li:hover ul{
+    display: block;
+}
+*/
+
+
+
+
+
+
+/*RIGHT*/
+
+.right{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*CONTEN HEADER*/
+
+.content-header{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 3px #e2e2e2;
+    padding: 0 20px;
+}
+
+.content-header h1{
+    font-size: 1.7em;
+}
+
+.content-header ol{
+    list-style-type: none;
+    color: #acacac;
+}
+
+/*Content Right*/
+
+.content-right{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 20px 15px;
+}
+
+.novidades{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-novidades{
+    width: 33%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    position: relative;
+}
+
+.cont-novidades a{
+    color: #f9f9f9;
+    text-decoration: none;
+    text-align: center;
+}
+
+.cont-green{
+    background-color: #00A65A;
+}
+
+.cont-pink{
+    background-color: #85144B;
+}
+
+.cont-blue{
+    background-color: #00C0EF;
+}
+
+.inner-novidades{
+    padding: 10px 10px;
+    color: #f9f9f9;
+    height: 100%;
+}
+
+.inner-novidades h3{
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.footer-novidades{
+    background-color: #cecece;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 0.9em;
+}
+
+.icon-novidades{
+    color: rgba(255,255,255, 0.2);
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    font-size: 5em;
+}
+
+.footer-novidades-green{
+    background-color: #008D4D;
+}
+
+.footer-novidades-pink{
+    background-color: #711140;
+}
+
+.footer-novidades-blue{
+    background-color: #00A3CB;
+}
+
+
+
+
+
+
+
+
+
+
+
+

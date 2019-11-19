@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" initial-scale=1>
+        <title>Sistema 1.0</title>
+        <link rel="stylesheet" type="text/css" href="style-sistema.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/257a1346b5.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header> <!-- Aqui Começa o HEADER -->
+           <div class="logo">
+                <a href=""><h3>SUA EMPRESA</h3></a>
+            </div>
+            <div class="nav-bar">
+                <a href="#" class="nav-bar-btn"><i class="fa fa-bars" onclick="esconderAsideLeft()"></i></a>   
+                <div class="navbar-right">
+                    <a href="#"><i class="fa fa-exclamation-triangle"></i></a>
+                    <a href="#"><i class="fa fa-question-circle" ></i></a>
+                    <a href="#"><i class="fa fa-cogs"></i></a> 
+                    <a class="dropdown" href="#"><i class="fa fa-user"></i><span>Mateus Garrido Monteiro <i class="fa fa-caret-down" ></i></span></a>   
+                </div>
+            </div>   
+        </header> <!-- Aqui Começa o HEADER -->
+        
+        <div class="container"> <!-- Aqui Começa o CONTAINER-->
+            <aside class="left-aside" id="aside-left"><!-- Aqui Começa o ASIDE LEFT -->
+                <div class="user-panel">
+                    <div class="user-image-aside">
+                        <a href="index.html"><img src="img/ft-panel.jpg" width="120"></a>
+                    </div>
+                </div>
+                
+                 <ul class="sidebar-menu">
+                        <li onclick="dropCadastro()">
+                            <div class="inter-sidebar">
+                                 <span class="fa fa-list-alt margin-left"></span>
+                                 <span class="spn">Cadastro</span> 
+                                 <i class="fa fa-angle-left pull-right"></i>
+                            </div> 
+                            <ul class="submenu-aside" id="cadastro">
+                                <li><a href="index.html"><span class="fas fa-user-friends"></span>Clientes</a></li>
+                                <li><a href="#"><span class="fas fa-dolly"></span>Fornecedores</a></li>
+                                <li><a href="#"><span class="fas fa-user-tie"></span>Funcionários</a></li>
+                                <li><a href="#"><span class="fas fa-truck"></span>Transportadoras</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li onclick="dropProdutos()">
+                            <div class="inter-sidebar"> 
+                                 <span class="fa fa-barcode margin-left"></span>
+                                 <span class="spn">Produtos</span> 
+                                 <i class="fa fa-angle-left "></i>
+                            </div>
+                             <ul class="submenu-aside" id="produtos">
+                                <li><a href="#"><span class="fas fa-cube"></span>Gerenciar produtos</a></li>
+                                <li><a href="#"><span class="fas fa-dollar-sign"></span>Valores de venda</a></li>
+                                <li><a href="#"><span class="fas fa-bookmark"></span>Etiquetas</a></li>
+                                <li><a href="#"><span class="fas fa-clipboard-list"></span>Opções auxiliares</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li onclick="dropServicos()">
+                            <div class="inter-sidebar"> 
+                                 <span class="fa fa-wrench margin-left"></span>
+                                 <span class="spn">Serviços</span> 
+                                 <i class="fa fa-angle-left"></i>
+                            </div>
+                         
+                             <ul class="submenu-aside" id="servico">
+                                <li><a href="#"><span class="fas fa-tools"></span>Gerenciar Serviços</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li onclick="dropOrcamento()">
+                           <div class="inter-sidebar"> 
+                                 <span class="fa fa-clipboard margin-left"></span> 
+                                 <span class="spn">Orçamentos</span> 
+                                 <i class="fa fa-angle-left"></i>
+                            </div>
+                             <ul class="submenu-aside" id="orcamento">
+                                <li><a href="#"><span class="fas fa-cube"></span>Produtos</a></li>
+                                <li><a href="#"><span class="fas fa-tools"></span>Serviços</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li onclick="dropOrdservico()">
+                            <div class="inter-sidebar"> 
+                                 <span class="fa fa-pencil-square-o margin-left"></span> 
+                                 <span class="spn">Ordem de serviços </span> 
+                                 <i class="fa fa-angle-left"></i>
+                            </div>   
+                        
+                            <ul class="submenu-aside" id="ord-servico">
+                                <li><a href="#"><span class="fas fa-tools"></span>Gerenciar O.S</a></li>
+                                <li>
+                                    <a href="#"><span class="fas fa-clipboard-list"></span>Opções auxiliares</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li onclick="dropVendas()">
+                             <div class="inter-sidebar"> 
+                                 <span class="fa fa-shopping-bag margin-left"></span> 
+                                 <span class="spn">Vendas</span> 
+                                 <i class="fa fa-angle-left"></i>
+                            </div>      
+                          
+                             <ul class="submenu-aside" id="vendas">
+                                <li><a href="#"><span class="fas fa-cube"></span>Produtos</a></li>
+                                <li><a href="#"><span class="fas fa-desktop"></span>Balcão</a></li>
+                                <li><a href="#"><span class="fas fa-tools"></span>Serviços</a></li>
+                                <li>
+                                    <a href="#"><span class="fas fa-clipboard-list"></span>Opções Auxiliares</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li onclick="dropEstoque()">
+                            <div class="inter-sidebar"> 
+                                 <span class="fas fa-cube margin-left"></span> 
+                                 <span class="spn">Estoque </span> 
+                                 <i class="fa fa-angle-left"></i>
+                            </div>        
+                
+                            <ul class="submenu-aside" id="estoque">
+                                <li><a href="#"><span class="fas fa-external-link-alt"></span>Movimentações</a></li>
+                                <li><a href="#"><span class="fas fa-expand-arrows-alt"></span>Ajustes</a></li>
+                                <li><a href="#"><span class="fas fa-exchange-alt"></span>Transferências</a></li>
+                                <li><a href="#"><span class="fas fa-clipboard"></span>Cotações</a></li>
+                                <li><a href="#"><span class="fas fa-shopping-bag"></span>Compras</a></li>
+                                <li>
+                                    <a href="#"><span class="fas fa-clipboard-list"></span>Opções auxiliares</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li onclick="dropFinanceiro()">
+                             <div class="inter-sidebar"> 
+                                 <span class="fa fa-money margin-left"></span> 
+                                 <span class="spn">Financeiro</span> 
+                                  <i class="fa fa-angle-left"></i>
+                            </div>          
+                         
+                             <ul class="submenu-aside" id="financeiro">
+                                <li><a href="#"><span class="fas fa-money-check"></span>Contas a pagar</a></li>
+                                <li><a href="#"><span class="fas fa-piggy-bank"></span>Contas a receber</a></li>
+                                <li><a href="#"><span class="fas fa-chart-bar"></span>Fluxo de caixa</a></li>
+                                <li><a href="#"><span class="fas fa-barcode"></span>Boletos bancários</a></li>
+                                <li>
+                                    <a href="#"><span class="fas fa-clipboard-list"></span>Opções Auxiliares</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li onclick="dropNfs()">
+                            <div class="inter-sidebar"> 
+                                 <span class="fa fa-money margin-left"></span> 
+                                 <span class="spn">Notas fiscais</span> 
+                                 <i class="fa fa-angle-left"></i>
+                            </div>            
+            
+                            <ul class="submenu-aside" id="nfs">
+                                <li><a href="#"><span class="fas fa-shopping-cart"></span>Gerenciar NF-e</a></li>
+                                <li><a href="#"><span class="fas fa-file-alt"></span>Gerenciar NFS-e</a></li>
+                                <li><a href="#"><span class="fas fa-qrcode"></span>Gerenciar NFC-e</a></li>
+                                <li>
+                                    <a href="#"><span class="fas fa-clipboard-list"></span>Opções auxiliares</a>
+                                </li>
+                            </ul>
+                        </li>
+                             
+                        <li onclick="dropContratos()">
+                            <div class="inter-sidebar"> 
+                                 <span class="fa fa-pencil margin-left"></span> 
+                                 <span class="spn">Contratos</span> 
+                                 <i class="fa fa-angle-left "></i>
+                            </div>         
+                   
+                            <ul class="submenu-aside" id="contratos">
+                                <li><a href="#"><span class="fas fa-tools"></span>Serviços</a></li>
+                                <li><a href="#"><span class="fas fa-exchange-alt"></span>Locações</a></li>
+                                <li><a href="#"><span class="fas fa-sync-alt"></span>Assinaturas</a></li>
+                                <li><a href="#"><span class="fas fa-clipboard-list"></span>Opções Auxiliares</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li onclick="dropAtendimento()">
+                            <div class="inter-sidebar"> 
+                                 <span class="fa fa-comments margin-left"></span> 
+                                 <span class="spn">Atendimentos</span> 
+                                 <i class="fa fa-angle-left"></i>
+                            </div>               
+
+                             <ul class="submenu-aside" id="atendimento">
+                                <li><a href="#"><span class="fas fa-tty"></span>Atendimentos</a></li>
+                                <li><a href="#"><span class="fas fa-clipboard-list"></span>Opções auxiliares</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="#"><span class="fa fa-calendar-check-o"></span>Agenda</a>
+                        </li>
+                        
+                        <li onclick="dropRelatorio()">
+                            <div class="inter-sidebar"> 
+                                 <span class="fa fa-file-o margin-left"></span> 
+                                 <span class="spn">Relatórios</span> 
+                                 <i class="fa fa-angle-left"></i>
+                            </div>              
+                        
+                             <ul class="submenu-aside" id="relatorios">
+                                <li><a href="#"><span class="fas fa-list-alt"></span>Cadastro</a></li>
+                                <li><a href="#"><span class="fas fa-dolly"></span>Vendas</a></li>
+                                <li><a href="#"><span class="fas fa-tools"></span>Ordens de serviços</a></li>
+                                <li><a href="#"><span class="fas fa-cube"></span>Estoque</a></li>
+                                <li><a href="#"><span class="fas fa-money"></span>Financeiro</a></li>
+                                <li><a href="#"><span class="fas fa-pencil-square-o"></span>Contratos</a></li>
+                                <li><a href="#"><span class="fa fa-sticky-note-o"></span>Notas fiscais</a></li>
+                                <li><a href="#"><span class="fa fa-comments"></span>Atendimento</a></li>
+                                <li><a href="#"><span class="fa fa-calendar-check-o"></span>Agendamento</a></li>
+                                <li><a href="#"><span class="fas fa-chart-bar"></span>Logs do Sistema</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="#"><span class="fa fa-users"></span>WebDesk</a>
+                        </li>
+                        
+                        <li onclick="dropConfig()">
+                            <div class="inter-sidebar"> 
+                                 <span class="fa fa-cog margin-left"></span> 
+                                 <span class="spn">Configurações</span> 
+                                 <i class="fa fa-angle-left"></i>
+                            </div>              
+                           
+                             <ul class="submenu-aside" id="config">
+                                <li><a href="#"><span class="fas fa-wrench"></span>Gerais</a></li>
+                                <li><a href="#"><span class="far fa-star"></span>Meu plano</a></li>
+                                <li><a href="#"><span class="fas fa-user"></span>Usuários</a></li>
+                                <li><a href="#"><span class="fas fa-suitcase"></span>Dados da empresa</a></li>
+                                <li><a href="#"><span class="far fa-images"></span>Marca da empresa</a></li>
+                                <li><a href="#"><span class="fas fa-store"></span>Empresa / Lojas</a></li>
+                                <li><a href="#"><span class="fas fa-bullhorn"></span>Avisos por e-mail</a></li>
+                                <li><a href="#"><span class="fas fa-certificate"></span>Certificado Digital</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                
+            </aside> <!-- Aqui TERMINA o ASIDE LEFT -->
+            
+            <div class="right"> <!-- Aqui Começa o RIGHT CONTENT-->
+                <div class="content-header">
+                    <h1>Boa tarde Mateus</h1>
+                    <ol>
+                        <li><i class="fa fa-dashboard" ></i> Inicio</li>
+                    </ol>
+                </div>
+                
+                <section class="content-right">
+                    <div class="novidades">
+                        <div class="cont-novidades cont-green">
+                             <div class="inner-novidades">
+                                 <h3>INTEGRAÇÕES</h3>
+                                 <p>Confira as integrações que desenvolvemos para turbinar o seu sistema de gestão</p>
+                             </div>
+                             <div class="icon-novidades"><i class="fas fa-sync-alt"></i></div>
+                             <a class="footer-novidades footer-novidades-green" href="">Saiba mais <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                        
+                        <div class="cont-novidades cont-pink">
+                             <div class="inner-novidades">
+                                 <h3>MEU CONTADOR</h3>
+                                  <p>Permita que seu contador tenha acesso às informações financeiras e contábeis da empresa.</p>
+                             </div>
+                            <div class="icon-novidades"><i class="fas fa-suitcase"></i></div>
+                             <a class="footer-novidades footer-novidades-pink" href="">Saiba mais <i class="fas fa-arrow-circle-right"></i></a>
+                         </div> 
+                         
+                        <div class="cont-novidades cont-blue">
+                             <div class="inner-novidades">
+                                 <h3>CENTRAL DE AJUDA</h3>
+                                  <p>Confira alguns tutorias que separamos para lhe auxiliar na utilização do sistema.</p>
+                             </div>
+                            <div class="icon-novidades"><i class="fas fa-question-circle"></i></div>
+                             <a class="footer-novidades footer-novidades-blue" href="">Saiba mais <i class="fas fa-arrow-circle-right"></i></a>
+                         </div>   
+                    </div>
+                </section>
+                
+                
+            </div><!-- Aqui TERMINA o RIGHT CONTENT-->
+        </div><!-- Aqui TERMINA o CONTAINER-->
+        
+        <!--SCRIPTS -->
+        <script type="text/javascript" src="js-system.js"></script>
+
+        
+    </body>
+</html>
